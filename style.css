@@ -8,6 +8,7 @@ header{
     top: 0px;
     gap: 450px;
     background-color: #1A1A1A;
+    z-index: 999;
 }
 header div{display: flex;
 gap: 90px;}
@@ -16,20 +17,85 @@ ul{
     gap: 30px;
   }
 a{text-decoration: none; color: white;}
+
 .erti{width: 100%;
-    min-height: 100px;
     height: 150px;
     background-color: #000000;
     color: white;
    margin-top:30px;
    padding-top: 30px;}
+
+   .ori{width: 100%;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background-image: url(./Image/Index/0000.jpg);
+   }
+   .shop{
+    width: 200px;
+    height: 50px;
+    border: 3px solid black;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #000000;
+    font-size: 30px;
+    cursor: pointer;
+}
+.shop:hover{
+    background-color: #000000;
+    color: #F5F3F3;
+    transition-duration: 1s;
+}
+.sami{ width: 100%;
+height: 600px;
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 20px;
+margin: 0 auto;
+}
+.sami1{
+    align-content: center;
+    justify-content: center;
+    width: 30%; 
+    height: 500px;
+}
+
+.otxi{
+    width: 100%;
+    height: 700px;
+    background-image: url(./Image/Index/cover-3.jpg); 
+    background-repeat: none;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.otxi1{width: 100%;
+    height: 250px;
+    background-color: #000000;
+    margin-top: 300px;
+   
+    align-content: center;
+}
+
+
+
+
+
+
 footer{border: 1px solid white;
     width: 100%;
     height: 380px;
     background-color: #000000;
     color: white;
-    position: relative;
-    bottom: 0px;
+    position: absolute;
+    margin-top: 50px;
     padding-top: 40px;
     display: flex;
     flex-direction: column;
@@ -67,6 +133,7 @@ footer input{
 input:hover{
     border:2px solid white
 }
+  
 .contact{
     width: 100%;
     height: 100vh;
@@ -123,17 +190,19 @@ gap: 30px;
         height: 60px;
         flex-direction: column;
         gap: 10px;}
-        .form{width: 100%;
+    .form{width: 100%;
             flex-direction: column;
             align-items: center;
         }
-        .input{display: flex;
+    .input{display: flex;
             flex-direction: column;
         width: 97%;
     gap: 15px;}
-        .form form input{width: 97%;}
-
+    .form form input{width: 97%;}
+    .products{  grid-template-rows: 100%;  }
 }
+
+  
 .croissant-one-regular {
     font-family: "Croissant One", serif;
     font-weight: 400;
@@ -149,3 +218,96 @@ gap: 30px;
 }
 .policies h1{font-size: 70px;}
 .policies h3{font-size: 15px;}
+
+   
+.about{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 23% 23% 23% 23%;
+    gap: 35px;
+}
+.about1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 25%;
+}
+.about2{
+    grid-column-start:3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.about3{
+    grid-column-start:2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.about4{display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 30px;
+    padding: 50px;
+    grid-column-start:2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+      
+
+.products{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;;
+    gap: 1%;
+    position: relative;
+}
+.sale{
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F3F3;
+    height: 600px;
+    cursor: pointer;
+}
+.sale img{width: 100%;}
+.btsale{width: 50px;
+    height: 20px;
+background-color: #000000;
+color: white;
+position: absolute;
+z-index: 900;}
+.sale a{position: relative;
+top: 0px;
+z-index: 810;}
+
+.quickview{width: 100%;
+height: 90px;
+background-color: transparent;
+color: transparent;
+
+}
+.sale:hover{
+    .quickview{
+    font-weight: bold;
+    color:#000000;
+    background-color: transparent;
+    font-size: 20px;
+    animation-name: button-up;
+    animation-duration: 1s;}
+
+}
+@keyframes button-up{
+    from{transform: translate(0, 20px);}
+    to{transform: translate(0, 0);}
+}
+
+.title{
+    width: 100%;
+    height: 200px;
+    padding-top: 70px;
+    text-align: center;
+}
